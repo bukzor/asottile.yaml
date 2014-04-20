@@ -4,7 +4,6 @@ timid = True
 source =
     .
 omit =
-    .tox/*
     /usr/*
     */tmp*
     setup.py
@@ -22,6 +21,9 @@ exclude_lines =
 
     # Don't complain if non-runnable code isn't run:
     ^if __name__ == ['"]__main__['"]:$
+
+show_missing = true
+fail_under = 100
 
 [html]
 directory = coverage-html
