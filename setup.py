@@ -2,7 +2,9 @@ from setuptools import setup
 
 
 setup(
-    name='asottile.yaml',
+    # So apparently distutils sdist grabs the python package matching the package name.
+    # In order to install nothign, I have to mangle the package name...
+    name='mangle.asottile.yaml',
     description="asottile's extensions to pyyaml.",
     url='http://github.com/asottile/asottile.yaml',
     version='0.1.0',
@@ -19,10 +21,10 @@ setup(
         'Programming Language :: Python :: Implementation :: PyPy',
     ],
 
-    packages=['asottile.yaml'],
-    namespace_packages=['asottile'],
+    # we install nothing at all, just to prove a point.
+    # packages=['asottile.yaml'],
+    # namespace_packages=['asottile'],
     install_requires=[
-        'asottile.ordereddict',
         'pyyaml',
     ],
 )

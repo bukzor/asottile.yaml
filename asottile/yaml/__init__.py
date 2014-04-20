@@ -1,5 +1,5 @@
 import yaml
-from asottile.ordereddict import OrderedDict
+from collections import OrderedDict
 
 # Adapted from http://stackoverflow.com/a/21912744/812183
 
